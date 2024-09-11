@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e9e9;
+    padding: 20px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 1px 0px 3px 1px rgb(163 134 134 / 58%);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    text-decoration:underline;
+}
+
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #141313;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #151313;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-button {
+    background-color: #218838;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+}
+
+#generate-button:hover {
+    background-color: #2eaf03;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+#resume-display {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 1px 0px 3px 1px rgb(163 134 134 / 58%);
+    display: none;
+}
+
+
+#intro {
+    background-color: darkcyan;
+    padding: 15px 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#intro h1 {
+    font-size: 32px;
+    font-weight: light;
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+#intro .line{
+    border: 1px #fff solid;
+    max-width:400px;
+}
+
+#intro p {
+    padding: 10px 0px;
+    font-size: 14px;
+}
+
+.icon{
+margin: 13px;
+}
+
+.icon img{
+    width: 35px;
+    display: block;
+    margin: 5px 0px;
+}
+.contact-info{
+ margin-top: 10px;
+}
+
+.education-section, .skills-section, .projects-section{
+    margin-top: 37px;
+    margin-left: 10px;
+}
+
+.education-section, .skills-section, .projects-section h2{
+color:darkcyan;
+}
+
+ul {
+    padding-left: 20px;
+    color: #000000;
+}
+
+li {
+    list-style-type:square;
+    margin-bottom: 4px;
+    font-size: large;
+}
+
+.badge {
+    background-color: #606063;
+    color: white;
+    padding: 5px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#resume-display button{
+    background-color:darkcyan;
+    color: white;
+    margin-left: 10px;
+}
+
+#resume-display button:hover{
+    background-color: darkgreen;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    #container {
+        padding: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    #generate-button {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        padding: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    #generate-button {
+        width: 100%;
+    }
+
+    button {
+        width: 44%;
+        padding: 9px;
+        margin: 7px;
+    }
+
+    h2 {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 769px) {
+    #generate-button {
+        width: 300px;
+    }
+
+    h2 {
+        margin-top: 30px; 
+    }
+}
