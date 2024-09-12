@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0e9e9;
+    font-family: "SUSE", sans-serif;
+    background-color: #fff9f9;
     padding: 20px;
 }
 
@@ -18,7 +18,8 @@ body {
     box-shadow: 1px 0px 3px 1px rgb(163 134 134 / 58%);
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -29,17 +30,16 @@ h1 {
 
 h2 {
     margin-top: 30px;
-    text-decoration:underline;
+    text-decoration: underline;
 }
-
-
 
 label {
     display: block;
     margin: 10px 0 5px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 95%;
     padding: 10px;
     margin-bottom: 15px;
@@ -76,12 +76,12 @@ button:hover {
 #resume-display {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     box-shadow: 1px 0px 3px 1px rgb(163 134 134 / 58%);
     display: none;
+    box-sizing: border-box;
 }
-
 
 #intro {
     background-color: darkcyan;
@@ -97,9 +97,9 @@ button:hover {
     margin-bottom: 5px;
 }
 
-#intro .line{
+#intro .line {
     border: 1px #fff solid;
-    max-width:400px;
+    max-width: 400px;
 }
 
 #intro p {
@@ -107,26 +107,31 @@ button:hover {
     font-size: 14px;
 }
 
-.icon{
-margin: 13px;
+.icon {
+    margin: 13px;
 }
 
-.icon img{
+.icon img {
     width: 35px;
     display: block;
     margin: 5px 0px;
 }
-.contact-info{
- margin-top: 10px;
+
+.contact-info {
+    margin-top: 10px;
 }
 
-.education-section, .skills-section, .projects-section{
+.education-section,
+.skills-section,
+.projects-section {
     margin-top: 37px;
     margin-left: 10px;
 }
 
-.education-section, .skills-section, .projects-section h2{
-color:darkcyan;
+.education-section,
+.skills-section,
+.projects-section h2 {
+    color: darkcyan;
 }
 
 ul {
@@ -135,7 +140,7 @@ ul {
 }
 
 li {
-    list-style-type:square;
+    list-style-type: square;
     margin-bottom: 4px;
     font-size: large;
 }
@@ -150,19 +155,45 @@ li {
     margin-bottom: 10px;
 }
 
-#resume-display button{
-    background-color:darkcyan;
-    color: white;
-    margin-left: 10px;
-}
-
-#resume-display button:hover{
-    background-color: darkgreen;
-}
-
 .skills {
     display: flex;
     flex-wrap: wrap;
+}
+
+#resume-display button {
+    background-color: darkcyan;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+}
+
+#edit-button,
+#generate-link-button,
+#download-button {
+    display: none;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: darkcyan;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#edit-button:hover,
+#generate-link-button:hover,
+#download-button:hover {
+    background-color: darkgreen;
 }
 
 @media (max-width: 600px) {
@@ -170,7 +201,8 @@ li {
         padding: 10px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 100%;
     }
 
@@ -194,7 +226,8 @@ li {
         padding: 10px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 100%;
     }
 
@@ -219,6 +252,22 @@ li {
     }
 
     h2 {
-        margin-top: 30px; 
+        margin-top: 30px;
+    }
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #resume-display, #resume-display * {
+        visibility: visible;
+    }
+
+    #resume-display {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
     }
 }

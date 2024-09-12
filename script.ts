@@ -3,6 +3,8 @@ const skillsContainer = document.getElementById("skills-container") as HTMLDivEl
 const projectsContainer = document.getElementById("projects-container") as HTMLDivElement;
 const form = document.getElementById("resume-form") as HTMLFormElement;
 
+
+
 document.getElementById("add-education")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
@@ -12,9 +14,8 @@ document.getElementById("add-education")?.addEventListener("click", () => {
 });
 
 document.getElementById("remove-education")?.addEventListener("click", () => {
-    if (educationContainer?.children.length == 1) {
-        null;
-    } else {
+    null;
+    if (educationContainer?.children.length > 1) {
         educationContainer?.lastChild?.remove();
     }
 });
@@ -29,12 +30,11 @@ document.getElementById("add-skill")?.addEventListener("click", () => {
 });
 
 document.getElementById("remove-skill")?.addEventListener("click", () => {
-    if (skillsContainer?.children.length == 1) {
-        null;
-    } else {
+    if (skillsContainer?.children.length > 1) {
         skillsContainer?.lastChild?.remove();
     }
 });
+
 
 document.getElementById("add-project")?.addEventListener("click", () => {
     const input = document.createElement("input");
@@ -46,12 +46,11 @@ document.getElementById("add-project")?.addEventListener("click", () => {
 });
 
 document.getElementById("remove-project")?.addEventListener("click", () => {
-    if (projectsContainer?.children.length == 1) {
-        null;
-    } else {
+    if (projectsContainer?.children.length > 1) {
         projectsContainer?.lastChild?.remove();
     }
 });
+
 
 form.addEventListener('submit', (event: Event) => {
     event.preventDefault();
@@ -88,15 +87,15 @@ form.addEventListener('submit', (event: Event) => {
         </div>
         <div class="contact-info">
             <div class="icon">
-                <img src="./1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="">
+                <img src="./1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="Phone Icon">
                 <p>${phone}</p>
             </div>
             <div class="icon">
-                <img src="./pngwing.com (2).png" alt="">
+                <img src="./pngwing.com (2).png" alt="Email Icon">
                 <p>${email}</p>
             </div>
             <div class="icon">
-                <img src="./pngwing.com (3).png" alt="">
+                <img src="./pngwing.com (3).png" alt="Address Icon">
                 <p>${address}</p>
             </div>
         </div>
@@ -120,19 +119,23 @@ form.addEventListener('submit', (event: Event) => {
                 ${projectsHTML}
             </ul>
         </div>
-        <button style="margin-top:25px" id="edit-button">Edit Resume</button>
-        <button id="download-button">Download cv</button>
     `;
-
 
     const resumeDisplay = document.getElementById('resume-display') as HTMLElement;
     const resume = document.getElementById("container") as HTMLElement;
+    const download = document.getElementById("download-button") as HTMLButtonElement;
+    const editButton = document.getElementById("edit-button") as HTMLButtonElement;
+    const generateLinkButton = document.getElementById('generate-link-button') as HTMLButtonElement;
+
     resumeDisplay.innerHTML = resumeHTML;
     resumeDisplay.style.display = 'block';
     resume.style.display = "none";
+    download.style.display = "block";
+    generateLinkButton.style.display = "block";
+    editButton.style.display = "block";
 
-    const editButton = document.getElementById("edit-button") as HTMLButtonElement;
-    editButton?.addEventListener("click", (e) => {
+
+    editButton?.addEventListener("click", () => {
         document.querySelector("#intro h1")?.setAttribute("contentEditable", "true");
 
         const education_items = document.querySelectorAll("p");
@@ -151,11 +154,28 @@ form.addEventListener('submit', (event: Event) => {
         });
     });
 
-    const download=document.getElementById("download-button");
-    download?.addEventListener("click",()=>{
-      editButton.style.display="none";
-      download.style.display="none";
-      window.print();
-    })
-});
 
+    generateLinkButton?.addEventListener('click', () => {
+        const sanitizedName = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '');
+        const uniquePath = `https://resume$/${sanitizedName}`;
+
+        navigator.clipboard.writeText(uniquePath).then(() => {
+            alert('Link copied to clipboard: ' + uniquePath);
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    });
+
+
+    download.addEventListener('click', () => {
+        download.style.display = "none";
+        editButton.style.display = "none";
+        generateLinkButton.style.display = "none";
+        if (resumeDisplay) {
+            window.print();
+        }
+        download.style.display = "block";
+        editButton.style.display = "block";
+        generateLinkButton.style.display = "block";
+    });
+});
