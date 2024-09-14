@@ -9,12 +9,12 @@ document.getElementById("add-education")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.required;
+    input.placeholder="School/College";
     input.classList.add("education");
     educationContainer?.appendChild(input);
 });
 
 document.getElementById("remove-education")?.addEventListener("click", () => {
-    null;
     if (educationContainer?.children.length > 1) {
         educationContainer?.lastChild?.remove();
     }
@@ -87,15 +87,15 @@ form.addEventListener('submit', (event: Event) => {
         </div>
         <div class="contact-info">
             <div class="icon">
-                <img src="./1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="Phone Icon">
+                <img src="./images/1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="Phone Icon">
                 <p>${phone}</p>
             </div>
             <div class="icon">
-                <img src="./pngwing.com (2).png" alt="Email Icon">
+                <img src="./images/pngwing.com (2).png" alt="Email Icon">
                 <p>${email}</p>
             </div>
             <div class="icon">
-                <img src="./pngwing.com (3).png" alt="Address Icon">
+                <img src="./images/pngwing.com (3).png" alt="Address Icon">
                 <p>${address}</p>
             </div>
         </div>
