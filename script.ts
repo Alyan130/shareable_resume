@@ -63,19 +63,19 @@ form.addEventListener('submit', (event: Event) => {
 
     const educationFields = document.querySelectorAll('.education') as NodeListOf<HTMLInputElement>;
     let educationHTML = '';
-    educationFields.forEach(function (field: HTMLInputElement) {
+    educationFields.forEach((field: HTMLInputElement)=>{
         educationHTML += `<li>${field.value}</li>`;
     });
 
     const skillFields = document.querySelectorAll('.skill') as NodeListOf<HTMLInputElement>;
     let skillsHTML = '';
-    skillFields.forEach(function (field: HTMLInputElement) {
+    skillFields.forEach((field: HTMLInputElement) =>{
         skillsHTML += `<span class="badge">${field.value}</span>`;
     });
 
     const projectFields = document.querySelectorAll('.project') as NodeListOf<HTMLInputElement>;
     let projectsHTML = '';
-    projectFields.forEach(function (field: HTMLInputElement) {
+    projectFields.forEach((field: HTMLInputElement)=> {
         projectsHTML += `<li>${field.value}</li>`;
     });
 

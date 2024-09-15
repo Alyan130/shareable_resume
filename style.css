@@ -190,7 +190,7 @@ li {
     cursor: pointer;
 }
 
-#edir:hover,
+#edit:hover,
 #generate:hover,
 #download:hover {
     background-color: darkgreen;
