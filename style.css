@@ -56,7 +56,7 @@ button {
     cursor: pointer;
 }
 
-#generate-button {
+#generateButton {
     background-color: #218838;
     padding: 12px 20px;
     width: 100%;
@@ -65,7 +65,7 @@ button {
     display: block;
 }
 
-#generate-button:hover {
+#generateButton:hover {
     background-color: #2eaf03;
 }
 
@@ -117,20 +117,20 @@ button:hover {
     margin: 5px 0px;
 }
 
-.contact-info {
+.contactInfo {
     margin-top: 10px;
 }
 
-.education-section,
-.skills-section,
-.projects-section {
+.educationSection,
+.skillsSection,
+.projectsSection {
     margin-top: 37px;
     margin-left: 10px;
 }
 
-.education-section,
-.skills-section,
-.projects-section h2 {
+.educationSection,
+.skillsSection,
+.projectsSection h2 {
     color: darkcyan;
 }
 
@@ -174,9 +174,9 @@ li {
     max-width: 200px;
 }
 
-#edit-button,
-#generate-link-button,
-#download-button {
+#edit,
+#generate,
+#download{
     display: none;
     margin: 10px auto;
     width: 100%;
@@ -190,9 +190,9 @@ li {
     cursor: pointer;
 }
 
-#edit-button:hover,
-#generate-link-button:hover,
-#download-button:hover {
+#edir:hover,
+#generate:hover,
+#download:hover {
     background-color: darkgreen;
 }
 
@@ -206,7 +206,7 @@ li {
         width: 100%;
     }
 
-    #generate-button {
+    #generateButton {
         width: 100%;
     }
 
@@ -231,7 +231,7 @@ li {
         width: 100%;
     }
 
-    #generate-button {
+    #generateButton {
         width: 100%;
     }
 
@@ -247,7 +247,7 @@ li {
 }
 
 @media (min-width: 769px) {
-    #generate-button {
+    #generateButton {
         width: 300px;
     }
 

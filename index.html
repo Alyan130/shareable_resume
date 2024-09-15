@@ -16,7 +16,7 @@
     <div id="container">
         <h1>Shareable Resume Builder</h1>
 
-        <form id="resume-form">
+        <form id="form">
             <h2>Personal information:</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your name" required>
@@ -30,36 +30,36 @@
             <textarea id="profile" rows="4" placeholder="Enter your summary" required></textarea>
 
             <h2>Education:</h2>
-            <div id="education-container">
+            <div id="educationField">
                 <input type="text" class="education" placeholder="School/College" required>
             </div>
-            <button type="button" id="add-education">+ Add Education</button>
-            <button type="button" id="remove-education">- Remove Eduction </button>
+            <button type="button" id="addEducation">+ Add Education</button>
+            <button type="button" id="removeEducation">- Remove Eduction </button>
 
 
             <h2>Skills:</h2>
-            <div id="skills-container">
+            <div id="skillsField">
                 <input type="text" class="skill" placeholder="Enter a skill" required>
             </div>
-            <button type="button" id="add-skill">+ Add Skill</button>
-            <button type="button" id="remove-skill">- Remove Skill</button>
+            <button type="button" id="addSkill">+ Add Skill</button>
+            <button type="button" id="removeSkill">- Remove Skill</button>
 
             <h2>Projects:</h2>
-            <div id="projects-container">
+            <div id="projectsField">
                 <input type="text" class="project" placeholder="Enter a project" required>
             </div>
-            <button type="button" id="add-project">+ Add Project</button>
-            <button type="button" id="remove-project">- Remove Project</button>
+            <button type="button" id="addProject">+ Add Project</button>
+            <button type="button" id="removeProject">- Remove Project</button>
 
-            <button type="submit" id="generate-button">Generate Resume</button>
+            <button type="submit" id="generateButton">Generate Resume</button>
     </div>
     </form>
 
     <div id="resume-display">
     </div>
-    <button id="edit-button">Edit Resume</button>
-    <button id="generate-link-button">Generate Link</button>
-    <button id="download-button">Download Resume</button>
+    <button id="edit">Edit Resume</button>
+    <button id="generate">Generate Link</button>
+    <button id="download">Download Resume</button>
 
     <script src="script.js"></script>
 </body>
